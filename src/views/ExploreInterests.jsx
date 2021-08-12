@@ -9,13 +9,7 @@ import Headers from "../components/Headers";
 
 export const ExploreInterests = () => {
   const [posts, setPosts] = useState();
-  const [tags, setTags] = useState([
-    "science",
-    "nasa",
-    "astrology",
-    "space",
-    "universe",
-  ]);
+  const [tags, setTags] = useState([]);
   const [sortedPosts, setSortedPosts] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -29,7 +23,7 @@ export const ExploreInterests = () => {
     if (response.success) {
       setPosts(response.posts);
       setSortedPosts(response.posts);
-      // getTags(response.posts);
+      getTags(response.posts);
       setLoading(false);
     }
   };
@@ -91,12 +85,7 @@ export const ExploreInterests = () => {
                 ))}
               </div>
               {sortedPosts.map((post) => (
-                <Post
-                  id={post._id}
-                  post={post}
-                  handleLikePost={handleLikePost}
-                  key={post._id}
-                />
+                <Post id={post._id} post={post} handleLikePost={handleLikePost} key={post._id} />
               ))}
             </div>
           ) : (
