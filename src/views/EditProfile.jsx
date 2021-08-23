@@ -228,14 +228,14 @@ export const EditProfile = () => {
          </a>
        </nav>
        <section className="content">
-         <h1>John Doe</h1>
+         <h1>Edit Profile</h1>
          <section className="profile">
            <div className="profile__image">
-             <img src="https://via.placeholder.com/100/" />
+           <img className="header__profilePicture" src={user.avatar} />
              <p>
-               <span>Hi {user.name}</span>
+               <span>{user.name}</span>
                <a
-                 className="link"
+                 className="link link--withIcon"
                  href="https://en.gravatar.com/support/how-to-sign-up/"
                >
                  <i className="icon material-icons">manage_accounts</i> Setup
