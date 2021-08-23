@@ -11,7 +11,7 @@ const Headers = () => {
     <section className="template__header">
       <header className="header">
         <Link to="/home">
-          <img className="header__logo" src="./images/logo--white.svg" />
+          <img className="header__logo" src="./images/logo--white.svg" alt="LetsTalkScience Logo"/>
         </Link>
 
         <div className="dropdown" onClick={() => setIsOpen(!isOpen)}>
@@ -19,7 +19,7 @@ const Headers = () => {
             <div className="header__profileName">
               Hello, <p>{user.name}</p>
             </div>
-            <img className="header__profilePicture" src={user.avatar} />
+            <img className="header__profilePicture" src={user.avatar} alt="User Avatar" />
             <i className="icon material-icons">arrow_drop_down</i>
           </div>
 

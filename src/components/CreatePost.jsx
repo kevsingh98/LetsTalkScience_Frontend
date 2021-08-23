@@ -7,12 +7,14 @@ export const CreatePost = ({
   handleCreatePost,
   loading,
 }) => {
+  const { user } = JSON.parse(localStorage.getItem("jwt"));
+
   return (
     <form className="post post--create">
       <div className="post__header">
         <img
           className="post__headerImage"
-          src="https://via.placeholder.com/50/"
+          src={user.avatar} alt="User Avatar" 
         />
         <h1 className="post__headerTitle">Create a post</h1>
       </div>

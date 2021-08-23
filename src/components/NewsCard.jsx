@@ -1,7 +1,10 @@
 import React from "react";
 
+
 export const NewsCard = ({ eachNews, handleRetweetPost }) => {
   console.log(eachNews);
+
+  
   return (
     <div className="post post--news">
       <div className="post__header">
@@ -39,8 +42,7 @@ export const NewsCard = ({ eachNews, handleRetweetPost }) => {
       </div>
 
       <div className="post__meta">
-        <p>10 Likes | 6 Dislikes | 10 Comments</p>
-        <span> 4 February 2021 </span>
+        <span> {Date(eachNews.datePublished)} </span>
       </div>
 
       <div className="post__footer">
@@ -51,13 +53,13 @@ export const NewsCard = ({ eachNews, handleRetweetPost }) => {
             onClick={() => handleRetweetPost(eachNews.description)}
           >
             <i className="toolbar__actionIcon icon material-icons">autorenew</i>
-            <span className="toolbar__actionName">Retweet</span>
+            <span className="toolbar__actionName">Repost</span>
           </a>
 
-          <a className="toolbar__action" type="button" href="">
+          {/* <a className="toolbar__action" type="button" href="">
             <i className="toolbar__actionIcon icon material-icons">comment</i>
             <span className="toolbar__actionName">Comments</span>
-          </a>
+          </a> */}
 
           <a className="toolbar__action" type="button" href="">
             <i className="toolbar__actionIcon icon material-icons">share</i>

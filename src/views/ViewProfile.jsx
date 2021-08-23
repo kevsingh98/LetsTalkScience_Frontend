@@ -101,22 +101,22 @@ export const ViewProfile = () => {
           </a>
         </nav>
         <section className="content">
-          <h1>{user.name}</h1>
+          <h1>My Profile</h1>
           <section className="profile">
             <div className="profile__image">
-              <img src="https://via.placeholder.com/100/" />
+              <img  src={user.avatar} alt="User Avatar"  />
               <p>
-                <span>Hi {user.name}</span>
+                <span>{user.name}</span>
                 <a
-                  className="link"
+                  className="link link--withIcon"
                   href="https://en.gravatar.com/support/how-to-sign-up/"
                 >
                   <i className="icon material-icons">manage_accounts</i> Setup
-                  your image
+                  Your Image
                 </a>
                 <span
                   className="add__button"
-                  style={{ textAlign: "center" }}
+                  // style={{ textAlign: "center" }}
                   onClick={() => history.push("/profile/edit")}
                 >
                   Edit Profile

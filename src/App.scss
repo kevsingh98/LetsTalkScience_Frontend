@@ -309,6 +309,16 @@ li:last-of-type .list__item {
   color: #18d3ba;
   cursor: pointer;
   transition: color 0.2s ease;
+
+  &--withIcon {
+    display: flex;
+    align-items: center;
+
+    i{
+      margin-right: 0.5rem;
+    }
+  }
+
 }
 
 .link:hover,
